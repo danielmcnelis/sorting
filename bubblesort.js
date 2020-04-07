@@ -1,4 +1,6 @@
-function bubbleSort(array){
+
+
+bubbleSort = (array) => {
     for(let j = 0; j < array.length; j++){
         for(let i =0; i < array.length; i++){
             let num1 = array[i];
@@ -8,13 +10,14 @@ function bubbleSort(array){
                 let swapNumbers = swap(num1, num2);
                 let last = array.slice(i+2);
                 array = [...first, ...swapNumbers, ...last];
-                console.log('after swapping', array);
             }
         }
     }
+
+    swap(1,2)
     return array;
 }
 
-function swap(num1, num2){
+swap = (num1, num2) => {
     return [num2, num1];
 }
